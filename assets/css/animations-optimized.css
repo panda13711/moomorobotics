@@ -1,0 +1,121 @@
+/* ============================================
+   SIMPLIFIED ANIMATIONS - Reduced CPU Usage
+   ============================================ */
+
+/* SIMPLIFIED - Only essential animations */
+@keyframes torchGlow {
+    0%, 100% { 
+        opacity: 0.3;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+}
+
+/* Navigation - Minimal animation */
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Hero - REMOVED complex animations */
+.hero::before,
+.hero::after {
+    /* Static patterns - no animation */
+    animation: none !important;
+}
+
+/* Simplified float for titles */
+@keyframes subtleFloat {
+    0%, 100% { 
+        transform: translateY(0);
+    }
+    50% { 
+        transform: translateY(-10px);
+    }
+}
+
+.hero h1 {
+    animation: subtleFloat 8s ease-in-out infinite;
+}
+
+/* Card animations - Only on hover */
+.service-card,
+.product-card,
+.benefit-item {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s ease;
+    /* GPU acceleration */
+    transform: translateZ(0);
+}
+
+.service-card:hover,
+.product-card:hover,
+.benefit-item:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Icon animations - Simplified */
+.service-icon,
+.benefit-icon,
+.product-image {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon,
+.benefit-item:hover .benefit-icon,
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* REMOVE all continuous background animations */
+.services::before,
+.products::before,
+.why-choose::before,
+.contact::before {
+    animation: none !important;
+}
+
+/* Featured service - Minimal animation */
+.featured-service::before {
+    animation: none !important;
+}
+
+/* Footer line - Simplified */
+footer::before {
+    animation: none !important;
+    opacity: 0.7;
+}
+
+/* Disable heavy shadow animations */
+.featured-list li:before {
+    animation: none !important;
+}
+
+/* Performance mode - Disable all animations on low-end devices */
+@media (max-width: 768px) {
+    .hero h1,
+    .service-icon,
+    .benefit-icon,
+    .product-image {
+        animation: none !important;
+    }
+}
+
+/* Reduced motion - Respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

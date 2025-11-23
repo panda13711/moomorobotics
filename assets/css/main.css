@@ -1,0 +1,21 @@
+/* ============================================
+   PERFORMANCE OPTIMIZED CSS - Main Consolidated File
+   Import all modular CSS files
+   ============================================ */
+
+/* Core Variables - Load First */
+@import url('variables.css');
+
+/* Base Styles */
+@import url('base.css');
+
+/* Component Styles */
+@import url('navigation.css');
+@import url('hero.css');
+@import url('sections.css');
+
+/* Animations */
+@import url('animations.css');
+
+/* Responsive Design - Load Last */
+@import url('responsive.css');

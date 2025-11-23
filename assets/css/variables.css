@@ -1,0 +1,35 @@
+/* ============================================
+   CSS Variables - Design Tokens
+   ============================================ */
+
+:root {
+    /* Monochrome Sci-Fi Palette */
+    --glow-white: #f6f6f6;
+    --glow-bright: #f8f8f8;
+    --glow-silver: #d7d7d7;
+    --glow-ice: #ebebeb;
+    --glow-blue: #bdbdbd;
+    --accent-soft: #cfcfcf;
+    --deep-void: #040404;
+    --dark-void: #0a0a0a;
+    --mid-void: #141414;
+    --light-void: #1f1f1f;
+    --text-secondary: rgba(233, 233, 233, 0.72);
+    --grid-line: rgba(255, 255, 255, 0.04);
+    --holo-cyan: #f4f4f4;
+    --holo-magenta: #d8d8d8;
+    --holo-yellow: #f0f0f0;
+    --holo-white: rgba(246, 246, 246, 0.92);
+    --dark-space: #0c0c0c;
+    --deep-space: #050505;
+    --neon-green: #f1f1f1;
+    --neon-pink: #dcdcdc;
+    
+    /* Gradients */
+    --neural-gradient: linear-gradient(135deg, rgba(244, 244, 244, 0.18) 0%, rgba(20, 20, 20, 0.72) 100%);
+    --plasma-gradient: linear-gradient(135deg, rgba(236, 236, 236, 0.22) 0%, rgba(12, 12, 12, 0.85) 100%);
+    --quantum-gradient: linear-gradient(135deg, rgba(228, 228, 228, 0.25) 0%, rgba(9, 9, 9, 0.9) 100%);
+    --white-glow: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(224, 224, 224, 0.92) 40%, rgba(191, 191, 191, 0.85) 100%);
+    --torch-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(210, 210, 210, 0.88) 50%, rgba(168, 168, 168, 0.82) 100%);
+    --ice-gradient: linear-gradient(135deg, rgba(240, 240, 240, 0.94) 0%, rgba(217, 217, 217, 0.9) 55%, rgba(196, 196, 196, 0.85) 100%);
+}

@@ -1,0 +1,106 @@
+/* ============================================
+   Performance Mode Styles
+   Ultra-efficient rendering for low-end devices
+   ============================================ */
+
+/* Enable with: document.body.setAttribute('data-performance-mode', 'true') */
+/* Or press: Ctrl+Shift+P to toggle manually */
+
+[data-performance-mode="true"] {
+    /* Disable all non-essential animations */
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0.1s !important;
+    }
+    
+    /* Force GPU acceleration on critical elements only */
+    .navbar,
+    .cta-button {
+        transform: translateZ(0);
+        will-change: auto;
+    }
+    
+    /* Simplify shadows */
+    .service-card,
+    .product-card,
+    .benefit-item {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        text-shadow: none !important;
+    }
+    
+    /* Disable canvas if present */
+    canvas {
+        display: none !important;
+    }
+    
+    /* Simplify backgrounds */
+    .hero::before,
+    .hero::after,
+    .services::before,
+    .products::before,
+    .why-choose::before {
+        opacity: 0.3 !important;
+        animation: none !important;
+    }
+    
+    /* Reduce backdrop blur */
+    .navbar {
+        backdrop-filter: blur(8px) !important;
+    }
+    
+    /* Disable transforms on hover */
+    .service-card:hover,
+    .product-card:hover,
+    .benefit-item:hover {
+        transform: none !important;
+    }
+    
+    /* Simplify glows */
+    .logo,
+    .section-title,
+    .nav-links a {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important;
+        filter: none !important;
+    }
+}
+
+/* Auto-enable for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    canvas {
+        animation-play-state: paused !important;
+    }
+}
+
+/* Auto-enable for low-end devices */
+@media (max-width: 480px) and (max-height: 812px) {
+    canvas {
+        max-height: 300px;
+    }
+    
+    .service-card,
+    .product-card {
+        contain: strict;
+    }
+}
+
+/* Performance indicator (optional) */
+[data-performance-mode="true"]::before {
+    content: '⚡ Performance Mode';
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    z-index: 9999;
+    opacity: 0.5;
+    pointer-events: none;
+}

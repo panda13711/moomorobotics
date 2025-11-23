@@ -1,0 +1,402 @@
+/* ============================================
+   Responsive Design & Media Queries
+   Mobile-First, Optimized for All Screens
+   ============================================ */
+
+/* Large Screens (1920px+) */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 4rem;
+    }
+    
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.5rem;
+        max-width: 900px;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    
+    .service-card,
+    .product-card {
+        padding: 3rem;
+    }
+}
+
+/* Desktop (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+/* Standard Desktop (1200px - 1439px) */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Laptop/Tablet Landscape (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services-grid,
+    .product-grid,
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .hero {
+        padding: 6rem 2rem;
+        min-height: 70vh;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    /* GPU optimization for tablets */
+    .service-card,
+    .product-card,
+    .benefit-item {
+        transform: translateZ(0);
+        will-change: auto;
+    }
+    
+    .featured-service {
+        padding: 2.5rem;
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        padding: 5rem 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile & Small Tablet (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Hide navigation links on mobile */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Add mobile menu hint */
+    .nav-container::after {
+        content: '☰';
+        font-size: 1.5rem;
+        color: var(--glow-white);
+        cursor: pointer;
+    }
+    
+    .navbar {
+        padding: 0.75rem 1.5rem;
+        background: rgba(10, 10, 10, 0.95);
+        border-bottom-width: 1px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+        letter-spacing: 1.2px;
+        text-shadow: 0 0 18px rgba(255, 255, 255, 0.65);
+    }
+    
+    .page-stage {
+        padding-top: 65px;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .hero {
+        margin-top: 0;
+        padding: 4rem 1.5rem;
+        min-height: 60vh;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-sky canvas {
+        height: 60vh !important;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .services-grid,
+    .product-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card,
+    .product-card,
+    .benefit-item {
+        padding: 2rem;
+        transform: translateZ(0);
+        contain: layout style paint;
+    }
+    
+    .service-card:hover,
+    .product-card:hover,
+    .benefit-item:hover {
+        transform: translateY(-5px) scale(1.02);
+        will-change: transform;
+    }
+    
+    .service-icon,
+    .benefit-icon,
+    .product-image {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .featured-service {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .featured-service h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    .cta-button,
+    .submit-button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .footer-links {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links a {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.6rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+        min-height: 50vh;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .service-card,
+    .product-card,
+    .benefit-item {
+        padding: 1.5rem;
+    }
+    
+    .service-card h3,
+    .product-card h3,
+    .benefit-item h3 {
+        font-size: 1.3rem;
+    }
+    
+    .service-card p,
+    .product-card p,
+    .benefit-item p {
+        font-size: 0.9rem;
+    }
+    
+    .service-card ul {
+        font-size: 0.85rem;
+    }
+    
+    .featured-service {
+        padding: 1.5rem;
+    }
+    
+    .featured-service h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+    
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .service-card,
+    .product-card,
+    .benefit-item {
+        padding: 1.2rem;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 3rem 2rem;
+    }
+    
+    .hero-sky canvas {
+        height: 100vh !important;
+    }
+    
+    .navbar {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-sky canvas,
+    .nebula-layer,
+    .shooting-star,
+    .galaxy-swash,
+    .hero::before,
+    .hero::after,
+    body::before,
+    body::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .shooting-star {
+        opacity: 0 !important;
+    }
+}

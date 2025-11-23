@@ -1,0 +1,157 @@
+/* ============================================
+   PERFORMANCE-FOCUSED CSS
+   Ultra-optimized for low memory & smooth animations
+   ============================================ */
+
+/* GPU Acceleration & Performance */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Force GPU acceleration on animated elements */
+.hero,
+.service-card,
+.product-card,
+.benefit-item,
+body::before {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Contain layout and paint to reduce repaints */
+.service-card,
+.product-card,
+.benefit-item,
+.hero-content {
+    contain: layout style paint;
+}
+
+/* Only use will-change on interactive elements */
+.cta-button:hover,
+.nav-links a:hover {
+    will-change: transform;
+}
+
+body {
+    font-family: 'Exo 2', 'Orbitron', monospace;
+    background: var(--bg-primary, #040404);
+    color: var(--text-primary, var(--glow-white));
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.page-stage {
+    perspective: 3000px;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
+}
+
+/* SIMPLIFIED Ambient Glow - Reduced complexity */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    animation: torchGlow 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: screen;
+    will-change: auto; /* Don't keep on GPU */
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive container padding */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+.section-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.1rem;
+    transform: translateZ(0);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.6rem 3.5rem;
+    background: var(--white-glow);
+    color: var(--deep-void);
+    text-decoration: none;
+    border-radius: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    font-weight: 800;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    /* Use transform for GPU */
+    transform: translateZ(0);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.7);
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}

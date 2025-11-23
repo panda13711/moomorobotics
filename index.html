@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moomo Robotics - Advanced Robotics Solutions for Industry & Research</title>
+    <meta name="description" content="Leading developer of quadruped robots, humanoid robots, and advanced robotic systems. Innovative solutions for industrial inspection, research, education, and autonomous applications.">
+    
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="quadruped robot, humanoid robot, robotic dog, industrial inspection robot, autonomous robot, AI robotics, robotic arms, LiDAR sensors, robot development platform, educational robotics, warehouse automation, research robotics">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- DNS Prefetch for images -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Critical CSS - Load immediately (OPTIMIZED VERSIONS) -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base-optimized.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="assets/css/unitree-grid.css">
+    
+    <!-- Non-critical CSS - Load with low priority (OPTIMIZED VERSIONS) -->
+    <link rel="stylesheet" href="assets/css/hero-optimized.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/sections-optimized.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/animations-optimized.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/responsive.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/performance-mode.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support media/onload -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/hero-optimized.css">
+        <link rel="stylesheet" href="assets/css/sections-optimized.css">
+        <link rel="stylesheet" href="assets/css/animations-optimized.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </noscript>
+    
+    <!-- Theme Toggle - Load immediately to prevent flash -->
+    <script src="assets/js/theme-toggle.js"></script>
+    
+    <!-- Analytics Integration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle theme">
+        <span id="theme-icon" class="theme-toggle-icon">☀️</span>
+        <span id="theme-text">Light</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Moomo Robotics</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="explore.html">Explore Robots</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-stage">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-sky" aria-hidden="true">
+                <canvas id="universeCanvas"></canvas>
+                <div class="nebula-layer"></div>
+                <div class="galaxy-swash"></div>
+                <div class="moon"></div>
+                <div class="shooting-star star-one"></div>
+                <div class="shooting-star star-two"></div>
+                <div class="shooting-star star-three"></div>
+            </div>
+            <div class="child-silhouette" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1>Advancing the Future of Intelligent Robotics</h1>
+                <p>Leading innovation in quadruped and humanoid robotics. Our cutting-edge autonomous systems empower industries, researchers, and innovators to push the boundaries of what's possible with intelligent machines.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="cta-button">Explore Our Robots</a>
+                </div>
+            </div>
+            <div class="child-rocket-scene" aria-hidden="true">
+                <svg viewBox="0 0 260 320" role="presentation">
+                    <defs>
+                        <linearGradient id="childCape" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#f2f2f2" stop-opacity="0.75"/>
+                            <stop offset="45%" stop-color="#c8c8c8" stop-opacity="0.55"/>
+                            <stop offset="100%" stop-color="#6e6e6e" stop-opacity="0.2"/>
+                        </linearGradient>
+                        <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+                            <feGaussianBlur stdDeviation="6"/>
+                        </filter>
+                    </defs>
+                    <ellipse cx="120" cy="94" rx="70" ry="75" fill="#f4f4f4" opacity="0.08" filter="url(#softBlur)"/>
+                    <ellipse cx="118" cy="88" rx="46" ry="50" fill="#f9f9f9" opacity="0.12" filter="url(#softBlur)"/>
+                    <g opacity="0.95">
+                        <path d="M94 52c13-16 40-18 55 0 11 14 10 32 2 44-9 13-26 22-41 20-24-2-33-22-31-38 2-15 9-22 15-26z" fill="#f2f2f2"/>
+                        <path d="M102 56c-13 9-16 24-12 37 5 18 26 28 41 24 20-4 30-26 24-44-4-12-16-22-30-23-9-1-19 1-23 6z" fill="#d9d9d9" opacity="0.75"/>
+                        <path d="M88 124c20-18 68-22 92 12 10 14 16 40 12 64-4 32-22 60-40 76l-82-4c-12-12-27-43-26-78 1-26 10-52 44-70z" fill="url(#childCape)"/>
+                        <path d="M94 164c-20 16-42 24-64 28" stroke="#d3d3d3" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+                        <path d="M160 158l42 18" stroke="#d3d3d3" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M126 210l-18 102" stroke="#dedede" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+                        <path d="M152 214l-6 98" stroke="#cfcfcf" stroke-width="7" stroke-linecap="round" opacity="0.35"/>
+                    </g>
+                    <g transform="translate(196 200) rotate(-12)" opacity="0.92">
+                        <polygon points="0,0 74,-26 36,58" fill="#fdfdfd" stroke="#ffffff" stroke-width="2"/>
+                        <polygon points="0,0 36,58 -18,46" fill="#e1e1e1" stroke="#f6f6f6" stroke-width="1.5"/>
+                        <path d="M-14 44 Q-34 64 -62 82" stroke="#cccccc" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.65"/>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Professional Services Section -->
+        <section class="services" id="products">
+            <div class="container">
+                <h2 class="section-title">Our Robot Products</h2>
+                <p class="section-subtitle">Advanced robotic systems engineered for performance, reliability, and versatility. From quadruped platforms to humanoid robots, our lineup represents the cutting edge of mobile robotics technology.</p>
+                
+                <div class="services-grid">
+                    <!-- MX-4 Quadruped Robot -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80" alt="MX-4" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>MX-4 Quadruped Robot</h3>
+                        <p>Our flagship quadruped platform with advanced agility and stability. Perfect for industrial inspection, research applications, and autonomous navigation in complex environments.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Max speed: 5 m/s</li>
+                            <li>Runtime: 2-4 hours</li>
+                            <li>IP67 waterproof rating</li>
+                            <li>360° LiDAR & depth cameras</li>
+                        </ul>
+                        <p class="service-price">Starting at $12,500</p>
+                    </div>
+
+                    <!-- HX-1 Humanoid Robot -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?w=400&q=80" alt="HX-1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>HX-1 Humanoid Robot</h3>
+                        <p>Advanced humanoid platform designed for research and development. Full-body motion control with 40+ degrees of freedom and sophisticated AI capabilities.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Height: 1.75m (5'9")</li>
+                            <li>40+ DOF articulation</li>
+                            <li>Real-time motion planning</li>
+                            <li>Open development platform</li>
+                        </ul>
+                        <p class="service-price">Starting at $89,000</p>
+                    </div>
+
+                    <!-- MX-Mini Compact Robot -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?w=400&q=80" alt="MX-Mini" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>MX-Mini Compact Robot</h3>
+                        <p>Lightweight and portable quadruped perfect for education and research. Affordable entry point into advanced robotics with full SDK support and extensive documentation.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Compact design (12kg)</li>
+                            <li>Indoor/outdoor capable</li>
+                            <li>ROS2 compatible</li>
+                            <li>Educational curriculum included</li>
+                        </ul>
+                        <p class="service-price">Starting at $3,500</p>
+                    </div>
+
+                    <!-- AR-7 Robotic Arm -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80" alt="AR-7" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>AR-7 Robotic Arm</h3>
+                        <p>Precision 7-axis robotic arm for manipulation tasks. Ideal for research labs, automation prototyping, and development of advanced manipulation algorithms.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>7 degrees of freedom</li>
+                            <li>5kg payload capacity</li>
+                            <li>0.1mm repeatability</li>
+                            <li>Force/torque sensing</li>
+                        </ul>
+                        <p class="service-price">Starting at $15,800</p>
+                    </div>
+
+                    <!-- LiDAR L2 Sensor -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=400&q=80" alt="LiDAR L2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>LiDAR L2 4D Sensor</h3>
+                        <p>Ultra-wide-angle 4D LiDAR with advanced perception capabilities. Next-generation environmental sensing for autonomous navigation and obstacle avoidance.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>360° x 90° FOV</li>
+                            <li>70m detection range</li>
+                            <li>10Hz scan rate</li>
+                            <li>IMU integrated</li>
+                        </ul>
+                        <p class="service-price">Starting at $2,800</p>
+                    </div>
+
+                    <!-- Development Kit -->
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size: 0; height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem;">
+                            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&q=80" alt="SDK" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Developer SDK & Platform</h3>
+                        <p>Comprehensive development tools and APIs for all Moomo robots. Full source code, simulation environments, and extensive documentation for rapid prototyping.</p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+                            <li>Open-source SDK (ROS2)</li>
+                            <li>Physics-based simulator</li>
+                            <li>Sample applications</li>
+                            <li>Community support forums</li>
+                        </ul>
+                        <p class="service-price">Free with robot purchase</p>
+                    </div>
+                </div>
+
+                <!-- Unitree-Style Product Grid -->
+                <div class="unitree-product-grid">
+                    <a href="products/mx-4.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="MX-4 Quadruped Robot" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>MX-4</h3>
+                            <p class="product-tagline">Peak Performance</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+
+                    <a href="products/hx-1.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?w=800&q=80" alt="HX-1 Humanoid Robot" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>HX-1</h3>
+                            <p class="product-tagline">Destiny Awakening</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+
+                    <a href="products/mx-mini.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?w=800&q=80" alt="MX-Mini Compact Robot" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>MX-Mini</h3>
+                            <p class="product-tagline">Compact Power</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+
+                    <a href="products/ar-7.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80" alt="AR-7 Robotic Arm" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>AR-7</h3>
+                            <p class="product-tagline">Precision Manipulation</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+
+                    <a href="products/lidar-l2.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=800&q=80" alt="LiDAR L2 Sensor" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>LiDAR L2</h3>
+                            <p class="product-tagline">4D Vision</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+
+                    <a href="products/sdk.html" class="unitree-product-card">
+                        <div class="unitree-product-image">
+                            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&q=80" alt="Developer SDK" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="unitree-product-info">
+                            <h3>Developer SDK</h3>
+                            <p class="product-tagline">Open Source</p>
+                            <span class="learn-more">Learn More →</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Explore Button -->
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="explore.html" class="cta-button-large" style="display: inline-block; padding: 1.5rem 4rem; background: var(--text-primary, #ffffff); color: var(--bg-primary, #040404); border: none; border-radius: 50px; font-family: 'Orbitron', monospace; font-size: 1.2rem; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);">
+                        Explore Our Robots →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="solutions">
+            <div class="container">
+                <h2 class="section-title">Industry Solutions</h2>
+                <p class="section-subtitle">Comprehensive robotic solutions tailored for diverse industries. From autonomous inspections to research platforms, our robots are deployed worldwide in demanding real-world applications.</p>
+                
+                <div class="product-grid">
+                    <!-- Industrial Inspection -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Industrial Inspection" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Industrial Inspection</h3>
+                        <p>Autonomous patrol and inspection robots for manufacturing facilities, power plants, and industrial sites. Reduce costs while improving safety and coverage with 24/7 monitoring capabilities.</p>
+                    </div>
+
+                    <!-- Research & Education -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Research Education" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Research & Education</h3>
+                        <p>Open-source platforms perfect for universities and research labs. Full SDK access, simulation tools, and extensive documentation accelerate robotics research and education.</p>
+                    </div>
+
+                    <!-- Warehouse Automation -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="Warehouse Automation" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Warehouse Automation</h3>
+                        <p>Intelligent mobile robots for logistics and warehouse operations. Autonomous navigation, inventory management, and seamless integration with existing warehouse management systems.</p>
+                    </div>
+
+                    <!-- Public Safety -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80" alt="Public Safety" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Public Safety & Security</h3>
+                        <p>Advanced patrol robots for security applications, emergency response, and search & rescue operations. Rugged design for challenging environments and critical missions.</p>
+                    </div>
+
+                    <!-- Agriculture & Environmental -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=600&q=80" alt="Agriculture" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Agriculture & Environment</h3>
+                        <p>Autonomous monitoring solutions for precision agriculture, environmental surveys, and wildlife research. All-terrain capability with advanced sensor integration.</p>
+                    </div>
+
+                    <!-- Custom Development -->
+                    <div class="product-card">
+                        <div class="product-image" style="font-size: 0; height: 150px; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Custom Development" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3>Custom Development</h3>
+                        <p>Tailored robotic solutions for unique applications. Our engineering team works with you to develop custom platforms, integrations, and specialized capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Why Choose Moomo Robotics?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><span class="material-icons">emoji_events</span></div>
+                        <h3>Industry-Leading Technology</h3>
+                        <p>Cutting-edge robotics platforms with advanced AI, superior mobility, and robust performance in real-world conditions.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><span class="material-icons">lock_open</span></div>
+                        <h3>Open-Source Platform</h3>
+                        <p>Full SDK access with ROS2 support, extensive documentation, and active developer community for rapid innovation.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><span class="material-icons">verified_user</span></div>
+                        <h3>2-Year Warranty</h3>
+                        <p>Comprehensive warranty coverage and dedicated technical support. Extended service plans available for commercial deployments.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><span class="material-icons">public</span></div>
+                        <h3>Global Deployment</h3>
+                        <p>Deployed in 50+ countries across research, industrial, and commercial applications. Proven reliability worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Interested in our robotics solutions? Contact us for product demonstrations, technical specifications, or custom development inquiries.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Interest Area *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select your interest...</option>
+                            <option value="mx4_quadruped">MX-4 Quadruped Robot</option>
+                            <option value="hx1_humanoid">HX-1 Humanoid Robot</option>
+                            <option value="mx_mini">MX-Mini Compact Robot</option>
+                            <option value="robotic_arm">AR-7 Robotic Arm</option>
+                            <option value="lidar">LiDAR L2 4D Sensor</option>
+                            <option value="industrial">Industrial Inspection Solution</option>
+                            <option value="research">Research & Education</option>
+                            <option value="custom">Custom Development</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your robotics needs or project requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Request Information</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#contact">Contact</a>
+                    <a href="https://github.com/moomorobotics" target="_blank">GitHub</a>
+                </div>
+                <p style="opacity: 0.7; margin-top: 2rem;">&copy; 2025 Moomo Robotics. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript - Defer for better performance -->
+    <script src="assets/js/analytics.js" defer></script>
+    <script src="assets/js/starfield.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>
